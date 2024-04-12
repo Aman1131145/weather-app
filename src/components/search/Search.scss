@@ -1,0 +1,30 @@
+.Search {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    input {
+        outline: 0;
+        height: auto;
+        padding: 12px;
+        letter-spacing: normal;
+        font-size: 14px;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        border: solid 1px var(--dark-gray);
+        color: var(--white);
+        background-color: var(--dark);
+    }
+    button {
+        font-weight: 700;
+        font-size: 16px;
+        border-radius: 6px;
+        padding: 12px 30px;
+        border: 0;
+        cursor: pointer;
+        color: var(--white);
+        background: var(--medium-blue);
+        &:hover{
+            background-color: #17324b;
+        }
+    }
+}

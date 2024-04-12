@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "../search/Search";
+import './Navbar.scss'
 
 function Navbar() {
     return (
