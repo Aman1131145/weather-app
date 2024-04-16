@@ -1,0 +1,32 @@
+.TodayWidget{
+    *{
+        background-color: var(--gray);
+    }
+    display: flex;
+    flex-direction: column;
+    p{
+        padding: 0.5rem;
+    }
+    .head{
+        display: flex;
+        justify-content: space-between;
+    }
+    .temprature-detail{
+        display: flex;
+        align-items: center;
+        p{
+            display: flex;
+            .temprature-num{
+                font-size: 3rem;
+            }
+        }
+    }
+    .details{
+        display: flex;
+        gap: 0.7rem;
+        .detail-elements{
+            display: flex;
+            gap: 0.2rem;
+        }
+    }
+}

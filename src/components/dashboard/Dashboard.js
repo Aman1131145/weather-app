@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../navbar/Navbar";
 import "./Dashboard.scss";
-import WeatherDetailCard from "../weatherDetailCard/WeatherDetailCard";
 import { useWeather } from "../../provider/weatherContext";
 import Notification from "../notification/Notification";
+import LeftBody from "../leftBody/LeftBody";
+import RightBody from "../rightBody/RightBody";
 
 function Dashboard() {
-    const { weatherData, error, hideError, info, setInfo } = useWeather();
+    const { weatherData, error, hideError, info, setInfo} = useWeather();
 
     const renderErrorIfAny = () => {
         if ((weatherData && weatherData.error) || error) {
@@ -38,7 +39,10 @@ function Dashboard() {
     return (
         <div className="Dashboard">
             <Navbar />
-            <WeatherDetailCard />
+            <main>
+                <LeftBody />
+                <RightBody />
+            </main>
             {renderErrorIfAny()}
             {renderNotificationIfAny()}
         </div>

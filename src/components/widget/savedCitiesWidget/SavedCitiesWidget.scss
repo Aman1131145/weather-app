@@ -1,0 +1,15 @@
+.SavedCitiesWidget{
+    display: flex;
+    flex-direction: column;
+    background-color:var(--gray);
+    border-radius: 0.7rem;
+    gap: 0.5rem;
+    *{
+        background-color: var(--gray);
+    }
+    padding: 1rem;
+    .cities{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

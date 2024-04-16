@@ -1,4 +1,8 @@
 .Dashboard{
-    color: var(--blue);
-    position: relative;
+    padding: 1rem;
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }

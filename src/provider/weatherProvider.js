@@ -19,6 +19,7 @@ export const WeatherProvider = ({ children }) => {
 
     const searchByCity = () => {
         if (city && city !== "") {
+            console.log('search by city');
             dispatch(WeatherThunkActions.getWeatherByCity({ city }));
         }
     };

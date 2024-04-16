@@ -1,13 +1,8 @@
 import { ERROR_BROWSER_GEOLOCATION_OFF, LOCAL_STORAGE_KEY_GPS_POSITION } from "./constants";
-
-export const getDay = (date) => new Date(date * 1000).getDate();
-export const getHour = (date) =>
-    new Date(date * 1000).toLocaleDateString("en-US");
-export const getMonth = (date) => {
-    return new Date(date * 1000).toLocaleDateString("default", {
-        month: "short",
-    });
-};
+const date = new Date();
+export const getDay = () => {
+    return date;
+}
 
 export const convertKelvinToCelcius = (k) => {
     return Math.trunc(k - 273.15);
