@@ -7,6 +7,7 @@ const Loader = () => {
             animationDuration="0.75"
             width="50"
             visible={true}
+            margin='auto'
         />
     );
 };

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from "react-redux";
 import { WeatherContext } from "./weatherContext";
-import * as WeatherThunkActions from "../thunks/weather";
+import {getWeatherByCity} from "../thunks/weather";
 import * as WeatherActions from "../reducers/weather";
 export const WeatherProvider = ({ children }) => {
     const dispatch = useDispatch();
@@ -10,7 +10,7 @@ export const WeatherProvider = ({ children }) => {
 
     const [error, setError] = useState(undefined);
     const [info, setInfo] = useState(undefined);
-    const [city, setCity] = useState("");
+    const [city, setCity] = useState("delhi");
     
     const hideError = () => {
         setError(undefined);
@@ -19,8 +19,7 @@ export const WeatherProvider = ({ children }) => {
 
     const searchByCity = () => {
         if (city && city !== "") {
-            console.log('search by city');
-            dispatch(WeatherThunkActions.getWeatherByCity({ city }));
+            dispatch(getWeatherByCity({ city }));
         }
     };
 

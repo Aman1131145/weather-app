@@ -1,14 +1,16 @@
 import React from "react";
 import Search from "../search/Search";
-import './Navbar.scss'
+import "./Navbar.scss";
 
 function Navbar() {
     return (
         <div className="Navbar">
             <div className="title">
-                <h1>WeatherApp</h1>
+                <h1>
+                    Weather Duck
+                </h1>
             </div>
-            <Search />
+            <Search className="search-component" />
         </div>
     );
 }

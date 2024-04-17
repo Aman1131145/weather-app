@@ -1,70 +1,52 @@
 .TodaysHighlightsWidget {
     display: flex;
     flex-direction: column;
-    * {
-        background-color: var(--gray);
-    }
-    .top-sections {
+    gap: 0.5rem;
+    .section{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        .aqi {
+        align-content: space-between;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        background-color: var(--gray);
+        border-radius: 0.6rem;
+        * {
+            background-color: var(--gray);
+        }
+        .sub-sections{
             display: flex;
-            justify-content: space-evenly;
+            gap: 0.5rem;
             flex-wrap: wrap;
-            .heading {
-                display: flex;
-                justify-content: space-between;
+            justify-content: space-evenly;
+            *{
+                background-color: var(--dark-gray);
             }
-            .aqi-details {
+            .sub-section{
                 display: flex;
-                justify-content: space-evenly;
+                background-color: var(--dark-gray);
+                padding: 1rem;
+                border-radius: 1rem;
                 align-items: center;
-                .data {
+                justify-content: space-evenly;
+                gap: 0.5rem;
+                border: 1px solid rgba(255, 255, 255, 0.260);
+                .icon{
+                    font-size: 2rem;
+                    text-align: center;
+                }
+                .data{
+                    flex: 2;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-        }
-
-        .sunrise-sunset {
-            .data{
-                display: flex;
-                .element {
-                    display: flex;
-                    flex: 1;
-                    justify-content: space-around;
-                    align-items: center;
-                    p {
-                        display: flex;
-                        flex-direction: column;
+                    gap: 0.5rem;
+                    .data-name{
+                        font-size: 0.7rem;
+                    }
+                    .collected-data{
+                        font-size: 1.3rem;
                     }
                 }
-                
             }
-        }
-
-        .section {
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column;
-            flex: 1;
-            padding: 0.5rem;
-        }
-    }
-    .bottom-sections{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .internal-widget{
-        border-radius:1rem;
-        padding: 0.5rem;
-        background-color: var(--dark-gray);
-        *{
-            background-color: var(--dark-gray);
         }
     }
 }

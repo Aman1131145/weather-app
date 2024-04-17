@@ -22,7 +22,6 @@ function Search() {
                 onKeyDown={(e) => handleSubmit(e)}
                 onChange={(e) => {
                     setCity(e.target.value);
-                    searchByCity(e.target.value);
                 }}
             />
         </div>

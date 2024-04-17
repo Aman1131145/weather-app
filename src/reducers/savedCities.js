@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const savedCitiesSlice = createSlice({
     name: "saved_cities",
     initialState: {
-        cities: ["Delhi", "London", "Mumbai", "Haridwar", "Bhopal"],
+        cities: [],
     },
     reducers: {
         setError: (state, action) => {

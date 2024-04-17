@@ -1,8 +1,6 @@
 .Dashboard{
     padding: 1rem;
-    main{
-        display: flex;
-        flex-direction: column;
+    .body-container{
         gap: 1rem;
     }
 }

@@ -1,0 +1,45 @@
+.notification {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    color: var(--white);
+    font-weight: 800;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 7px 7px 15px -10px rgb(37 38 49 / 31%);
+    text-transform: capitalize;
+    background-color: var(--dark-gray);
+    border: 1px solid var(--white);
+    * {
+        background-color: var(--gray);
+    }
+    .info {
+        background-color: var(--plain-blue);
+    }
+    .error {
+        background-color: var(--plain-red);
+    }
+    .notification-message {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .error-image {
+            width: 16px;
+            margin-right: 12px;
+            font-size: large;
+        }
+    }
+    .close-image {
+        width: 12px;
+        cursor: pointer;
+        font-size: large;
+    }
+}

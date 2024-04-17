@@ -7,7 +7,8 @@ import LeftBody from "../leftBody/LeftBody";
 import RightBody from "../rightBody/RightBody";
 
 function Dashboard() {
-    const { weatherData, error, hideError, info, setInfo} = useWeather();
+    const { weatherData, error, hideError, info, setInfo, searchByCity } =
+        useWeather();
 
     const renderErrorIfAny = () => {
         if ((weatherData && weatherData.error) || error) {
@@ -36,13 +37,17 @@ function Dashboard() {
             );
         }
     };
+
+    useEffect(() => {
+        searchByCity("delhi");
+    }, []);
     return (
         <div className="Dashboard">
             <Navbar />
-            <main>
-                <LeftBody />
-                <RightBody />
-            </main>
+            <div className="body-container">
+                <LeftBody className="left-body" />
+                <RightBody className="right-body" />
+            </div>
             {renderErrorIfAny()}
             {renderNotificationIfAny()}
         </div>

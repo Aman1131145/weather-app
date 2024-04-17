@@ -7,7 +7,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import {
     convertKelvinToCelcius,
     getDay,
-    getMonth,
     getWeatherIcon,
 } from "../../../utils";
 import { useDispatch, useSelector } from "react-redux";
@@ -69,7 +68,9 @@ function TodayWidget() {
             <div className="head">
                 <h2>Now</h2>
                 <p className="save-city" onClick={() => handleClick()}>
-                    Save City
+                    {
+                        cities.indexOf(location) === -1 ? <span>Save City</span> : <span>Saved</span>
+                    }
                 </p>
             </div>
             <div className="temprature-detail">
